@@ -105,6 +105,7 @@ public class Mob extends Rectangle {
 					} catch(Exception e) {}
 				}
 				mobWalk = 0;
+
 			}
 			
 			if(Screen.room.block[yC][xC].airID == Value.airCave) {
@@ -147,8 +148,8 @@ public class Mob extends Rectangle {
 	
 	public void draw(Graphics g) {
 		if(inGame) {
-			g.drawImage(Screen.tileset_mob[mobID], x, y, width, height, null);	
-			
+			g.drawImage(Screen.tileset_mob[mobID], x, y, width, height, null);
+
 			//Health bar
 			g.setColor(new Color(180, 50, 50));
 			g.fillRect(x, y - (healthSpace + healthHeight), width, healthHeight);
@@ -158,9 +159,8 @@ public class Mob extends Rectangle {
 
 			g.setColor(new Color(0, 0, 0));
 			g.drawRect(x, y - (healthSpace + healthHeight), health-1, healthHeight-1);
-
-
 		}
+
 	}
 	
 }

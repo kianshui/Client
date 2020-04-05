@@ -69,7 +69,8 @@ public class Screen extends JPanel implements Runnable{
 		tileset_res[0] = new ImageIcon("res/cell.png").getImage();
 		tileset_res[1] = new ImageIcon("res/heart.png").getImage();
 		tileset_res[2] = new ImageIcon("res/coin.png").getImage();
-		
+		tileset_res[3] = new ImageIcon("res/blood.png").getImage();
+
 		tileset_mob[0] = new ImageIcon("res/mob.png").getImage();
 		
 		gameOver[0] = new ImageIcon("res/gameOver.png").getImage();
@@ -150,8 +151,8 @@ public class Screen extends JPanel implements Runnable{
 	public int spawnTime = 2400, spawnFrame = 0;
 	public void mobSpawner() {
 		if (spawnFrame >= spawnTime) {
-			for (int i = 0; i < level*10; i++) {
-			//for (int i = 0; i < mobs.length; i++) {
+			for (int i = 0; i < killsToWin; i++) {
+
 				if (!mobs[i].inGame) {
 					mobs[i].spawnMob(Value.mobBlue);
 					break;

@@ -1,13 +1,13 @@
-Tower Defense Project
+# Tower Defense Project
 
-How we make the 'Tower defense game'?
+###How we make the 'Tower defense game'?
 -Java AWT(Abstract Window Toolkit)
 
-First, making the layout in Class Frame by Inheritance.
-About the layout
+###First, making the layout in Class Frame by Inheritance.
+####About the layout
     class Frame
-        -The Frame is the container that contain title bar and can have menu bars.
-        -class Frame extends JFrame
+    -The Frame is the container that contain title bar and can have menu bars.
+    -class Frame extends JFrame
 
     class Screen
         -screen which draw stuff
@@ -31,34 +31,35 @@ About the layout
     class Value
         -all the values we used for our drawing
 
+    class Store
+        -shop for tower
+        -draw player health and coin
+   
+    class KeyHandel
+        -gives us the mouse position
+        -class KeyHandel implements MouseMotionListener, MouseListener
    File Save
    -mission layout
 
     class Save
         -load mission layout file
 
-    class Store
-        -shop for tower
-        -draw player health and coin
 
-    class KeyHandel
-        -gives us the mouse position
-        -class KeyHandel implements MouseMotionListener, MouseListener
+###After the layout is done.
+Then, we make the class of monsters.
 
-After the layout is done.
-Then, we make the class of monsters
     class Mob
         -class Mob extends Rectangle
         -spawn monster
         -monster moves
-            -detect where the road is and walk on it according to layout
+        -walk according to layout
         -monster health
-            -health deduction
-            -check if monster died
-            -delete monster
-            -get Coin
+        -health deduction
+        -check if monster died
+        -delete monster
+        -get Coin
 
 
+And Shoting
 
-
-Last, we make shooting and multiple level
+    

@@ -1,6 +1,4 @@
-//18001084 Yap Kian Shui COE
-//18001106 Yap Kian San COE
-//OOP project tower defense game 2nd draft
+
 import java.awt.*;
 
 public class Mob extends Rectangle {
@@ -41,14 +39,13 @@ public class Mob extends Rectangle {
 		inGame = false;
 		direction = right;
 		mobWalk = 0;
-
 	}
 	
 	public void looseHealth() {
 		Screen.health -= 1;
 	}
-	
-	public int walkFrame = 0, walkSpeed = 40;
+
+	public int walkFrame = 0, walkSpeed = 30;
 	public void physic() {
 		if(walkFrame >= walkSpeed) {
 			if(direction == right) {
@@ -62,7 +59,7 @@ public class Mob extends Rectangle {
 			}
 			
 			mobWalk += 1;
-			
+			//monster checking the pathway
 			if(mobWalk == Screen.room.blockSize) {
 				if(direction ==right) {
 					xC += 1;	
@@ -127,16 +124,15 @@ public class Mob extends Rectangle {
 			
 		}		
 	}
-	
+
 	public void loseHealth(int amo) {
 		health -= amo;
 		checkDeath();
 	}
-	
+
 	public void checkDeath() {
 		if(health == 0) {
 			deleteMob();
-
 			Screen.room.block[0][0].getMoney(mobID);
 		}
 	}
@@ -156,10 +152,10 @@ public class Mob extends Rectangle {
 			//Health bar
 			g.setColor(new Color(180, 50, 50));
 			g.fillRect(x, y - (healthSpace + healthHeight), width, healthHeight);
-			
+			//show the deducted health
 			g.setColor(new Color(50, 180, 50));
 			g.fillRect(x, y - (healthSpace + healthHeight), health, healthHeight);
-			
+
 			g.setColor(new Color(0, 0, 0));
 			g.drawRect(x, y - (healthSpace + healthHeight), health-1, healthHeight-1);
 

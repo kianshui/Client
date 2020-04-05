@@ -1,6 +1,4 @@
-//18001084 Yap Kian Shui COE
-//18001106 Yap Kian San COE
-//OOP project tower defense game 2nd draft
+
 import java.io.*;
 import java.util.*;
 

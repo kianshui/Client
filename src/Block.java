@@ -1,6 +1,4 @@
-//18001084 Yap Kian Shui COE
-//18001106 Yap Kian San COE
-//OOP project tower defense game 2nd draft
+
 import java.awt.*;
 
 public class Block extends Rectangle {
@@ -62,8 +60,9 @@ public class Block extends Rectangle {
 			if(Screen.mobs[shotMob].isDead()) {				
 				shoting = false;
 				shotMob = -1;
-				Screen.killed += 1;
 				Screen.hasWon();
+				System.out.println(Screen.killed);
+
 			}
 		}		
 	}

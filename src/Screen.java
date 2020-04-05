@@ -1,6 +1,4 @@
-//18001084 Yap Kian Shui COE
-//18001106 Yap Kian San COE
-//OOP project tower defense game 2nd draft
+import java.util.Random;
 import java.awt.*;
 import java.awt.image.*;
 import java.io.*;
@@ -44,8 +42,7 @@ public class Screen extends JPanel implements Runnable{
 	public static void hasWon() {
 		if(killed == killsToWin) {
 			isWin = true;
-			killed = 0;
-			coinage = 0;
+
 		}else{
 			isWin = false;
 		}
@@ -55,8 +52,9 @@ public class Screen extends JPanel implements Runnable{
 		room = new Room();
 		save = new Save();
 		store = new Store();
-		
-		coinage = level*10 ;
+
+		killed = 0;
+		coinage = 100 ;
 		health = 10;
 		
 		for(int i=0; i<tileset_ground.length;i++) {	//creating a image and cropping it
@@ -103,7 +101,8 @@ public class Screen extends JPanel implements Runnable{
 		g.drawLine(room.block[0][0].x-1, 0, room.block[0][0].x-1, room.block[room.worldHeight-1][0].y + room.blockSize);	//Drawing the left line
 		g.drawLine(room.block[0][room.worldWidth-1].x + room.blockSize, 0, room.block[0][room.worldWidth-1].x + room.blockSize, room.block[room.worldHeight-1][0].y + room.blockSize);	//Drawing the right line
 		g.drawLine(room.block[0][0].x, room.block[room.worldHeight-1][0].y + room.blockSize, room.block[0][room.worldWidth-1].x + room.blockSize, room.block[room.worldHeight-1][0].y + room.blockSize); //Drawing the bottom line
-		
+
+
 		room.draw(g); 	//Drawing the room
 		
 		for(int i=0;i<mobs.length;i++) {
@@ -131,30 +130,38 @@ public class Screen extends JPanel implements Runnable{
 		if(isWin) {
 			g.setColor(new Color(255, 255, 255));
 			g.fillRect(0, 0, getWidth(), getHeight());
-			g.setColor(new Color(0, 0, 0));
-			g.setFont(new Font("Courier new", Font.BOLD, 14));
+			g.setColor(new Color(161, 18, 136));
+			g.setFont(new Font("Courier new", Font.BOLD, 35));
 			if(level == maxLevel) {
-				g.drawString("You won the whole game! Please wait and the window will close...", 50, myHeight/2);
-				
+				g.drawString("You won the whole game!", 50, myHeight/2-30);
+				g.drawString("Window closing...", 50, myHeight/2+30);
 			} else {
-				g.drawString("You won! Congratulation! Please wait for the next level...", 50, myHeight/2);
+				g.drawString("You won! Congratulation!", 50, myHeight/2-30);
+				g.drawString("Loading next level...", 50, myHeight/2+30);
 			}
 		}
+
+
+		g.setColor(new Color(38, 32, 142));
+		g.setFont(new Font("Courier new", Font.BOLD, 20));
+		g.drawString("Enemy " + killed +"/"+ killsToWin , myWidth-170, 20);
 	}
 	
 	public int spawnTime = 2400, spawnFrame = 0;
 	public void mobSpawner() {
-		if(spawnFrame >= spawnTime) {
-			for(int i=0;i<mobs.length;i++) {
-				if(!mobs[i].inGame){
-					mobs[i].spawnMob(Value.mobGreeny);
+		if (spawnFrame >= spawnTime) {
+			for (int i = 0; i < level*10; i++) {
+			//for (int i = 0; i < mobs.length; i++) {
+				if (!mobs[i].inGame) {
+					mobs[i].spawnMob(Value.mobBlue);
 					break;
 				}
 			}
 			spawnFrame = 0;
-		}else {
-			spawnFrame +=1;
+		} else {
+			spawnFrame += 1;
 		}
+
 	}
 	
 	public void run() {

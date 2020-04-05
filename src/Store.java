@@ -1,6 +1,4 @@
-//18001084 Yap Kian Shui COE
-//18001106 Yap Kian San COE
-//OOP project tower defense game 2nd draft
+
 import java.awt.*;
 
 public class Store {
@@ -46,7 +44,7 @@ public class Store {
 					}
 				}
 			}
-			
+			//hold item to mouse
 			if(holdsItem) {
 				if(Screen.coinage >= buttonPrice[realID]) {
 					for(int y =0;y<Screen.room.block.length;y++) {
@@ -79,6 +77,7 @@ public class Store {
 	public void draw(Graphics g) {
 			
 		for(int i=0; i<button.length; i++) {
+			//to see if mouse coordinate is in the cell
 			if(button[i].contains(Screen.mse)) {
 				g.setColor(new Color(255, 255, 255, 100));
 				g.fillRect(button[i].x, button[i].y, button[i].width, button[i].height);

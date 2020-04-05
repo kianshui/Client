@@ -76,7 +76,7 @@ public class Screen extends JPanel implements Runnable{
 		
 		gameOver[0] = new ImageIcon("res/gameOver.png").getImage();
 		
-		save.loadSave(new File("save/mission" + level + ".ulixava"));
+		save.loadSave(new File("save/mission" + level));
 		
 		for(int i=0; i<mobs.length;i++) {
 			mobs[i] = new Mob();
@@ -175,7 +175,7 @@ public class Screen extends JPanel implements Runnable{
 						} else {
 							level += 1;
 							define();
-							save.loadSave(new File("save/mission" + level + ".ulixava"));
+							save.loadSave(new File("save/mission" + level));
 							isWin = false;
 						}
 						

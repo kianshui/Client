@@ -136,6 +136,7 @@ public class Mob extends Rectangle {
 	public void checkDeath() {
 		if(health == 0) {
 			deleteMob();
+
 			Screen.room.block[0][0].getMoney(mobID);
 		}
 	}

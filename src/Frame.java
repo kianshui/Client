@@ -7,7 +7,7 @@ import java.awt.*;
 public class Frame extends JFrame {
 	public static String title = "Tower defense";
 	public static Dimension size = new Dimension(700,550);
-	//public static String musicPath = "/core/underdog.mp3";
+
 	public Frame() {
 		setTitle(title);
 		setSize(size);

@@ -1,10 +1,10 @@
 # Tower Defense Project
 
-##How we make the 'Tower defense game'?
+## How we make the 'Tower defense game'?
 libs-Java AWT(Abstract Window Toolkit)
 
-###First, making the layout in Class Frame by Inheritance.
-####About the layout
+### First, making the layout in Class Frame by Inheritance.
+#### About the layout
     class Frame
     -The Frame is the container that contain title bar and can have menu bars.
     -class Frame extends JFrame
@@ -45,7 +45,7 @@ libs-Java AWT(Abstract Window Toolkit)
         -load mission layout file
 
 
-###After the layout is done.
+### After the layout is done.
 Then, we make the class of monsters.
 
     class Mob

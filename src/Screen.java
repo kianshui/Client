@@ -54,7 +54,7 @@ public class Screen extends JPanel implements Runnable{
 		store = new Store();
 
 		killed = 0;
-		coinage = 10;
+		coinage = 20;
 		health = 10;
 		
 		for(int i=0; i<tileset_ground.length;i++) {	//creating a image and cropping it

@@ -1,7 +1,7 @@
 # Tower Defense Project
 
-###How we make the 'Tower defense game'?
--Java AWT(Abstract Window Toolkit)
+##How we make the 'Tower defense game'?
+libs-Java AWT(Abstract Window Toolkit)
 
 ###First, making the layout in Class Frame by Inheritance.
 ####About the layout
@@ -62,4 +62,15 @@ Then, we make the class of monsters.
 
 And Shoting
 
+    Shoting
+        -build tower with mouse
+            -tower price
+            -shoting range(rectangle)
+        -deduct monster's health
+        -gain money when kill
+
+Proceed to next level
     
+    check killed monsters with winning condition
+        -proceed to next level
+        -WIN

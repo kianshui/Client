@@ -159,6 +159,11 @@ public class Mob extends Rectangle {
 
 			g.setColor(new Color(0, 0, 0));
 			g.drawRect(x, y - (healthSpace + healthHeight), health-1, healthHeight-1);
+			System.out.println(health);
+			if (health < 4 ){
+				g.drawImage(Screen.tileset_res[3], Screen.room.block[yC][xC].x, Screen.room.block[yC][xC].y, width, height, null);
+				g.drawImage(Screen.tileset_res[4], Screen.room.block[yC][xC].x, Screen.room.block[yC][xC].y, width, height, null);
+			}
 		}
 
 	}

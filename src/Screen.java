@@ -16,10 +16,9 @@ public class Screen extends JPanel implements Runnable{
 	public static int myWidth, myHeight;
 	public static int coinage, health;
 	public static int killed = 0, killsToWin = 0, level = 1, maxLevel = 3;
-	public static int winTime = 4000, winFrame = 0;
+	public static int winTime = 3300, winFrame = 0;
 	
 	public static boolean isFirst = true;
-	public static boolean isDead = false;
 	public static boolean isDebug = false;
 	public static boolean isWin = false;
 	
@@ -149,6 +148,7 @@ public class Screen extends JPanel implements Runnable{
 	}
 	
 	public int spawnTime = 2400, spawnFrame = 0;
+	//spawnFrame will increment until reaches spawnTime to call mobSpawner()
 	public void mobSpawner() {
 		if (spawnFrame >= spawnTime) {
 			for (int i = 0; i < killsToWin; i++) {

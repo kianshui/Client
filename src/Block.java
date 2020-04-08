@@ -36,9 +36,9 @@ public class Block extends Rectangle {
 		}
 		if(!shoting) {
 			if(airID == Value.airTowerLaser) {
-			//more tower 		if(airID == Value.airTowerLaser || air == Value.anothertower) {
 				for(int i=0;i<Screen.mobs.length;i++) {
 					if(Screen.mobs[i].inGame) {
+						//do shot when monster is near tower
 						if(towerSquare.intersects(Screen.mobs[i])) {
 							shoting = true;
 							shotMob = i;
@@ -73,11 +73,13 @@ public class Block extends Rectangle {
 	}
 	
 	public void fight(Graphics g) {
+		//for debugging i will draw a rectangle to see the attack range
 		if(Screen.isDebug) {
 			if(airID == Value.airTowerLaser) {
 				g.drawRect(towerSquare.x, towerSquare.y, towerSquare.width, towerSquare.height);
 			}
-		}	
+		}
+		//here is where the shoting line comes from
 		if(shoting){
 			g.setColor(new Color(255,255,0));
 			g.drawLine(x + (width/2), y + (height/2), Screen.mobs[shotMob].x + Screen.mobs[shotMob].width/2, Screen.mobs[shotMob].y + Screen.mobs[shotMob].height/2);

@@ -46,6 +46,7 @@ public class Mob extends Rectangle {
 	}
 
 	public int walkFrame = 0, walkSpeed = 30;
+	//walkFrame will increment until reaches walkSpeed to call mobSpawner()
 	public void physic() {
 		if(walkFrame >= walkSpeed) {
 			if(direction == right) {

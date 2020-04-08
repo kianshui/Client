@@ -151,6 +151,7 @@ public class Screen extends JPanel implements Runnable{
 	//spawnFrame will increment until reaches spawnTime to call mobSpawner()
 	public void mobSpawner() {
 		if (spawnFrame >= spawnTime) {
+			//monster will spawn according to the killsToWin
 			for (int i = 0; i < killsToWin; i++) {
 
 				if (!mobs[i].inGame) {

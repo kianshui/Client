@@ -6,15 +6,15 @@
 #### What's new in our project:
 
 ### Solved bugs
-    1.1 The coin increase is corrected when the monster is being shot and killed by multiple towers.
-    1.2 The monsters spawned exceeded the winning condition.(infinite spawning)
+    1. The coin increase is corrected when the monster is being shot and killed by multiple towers.
+    2. The monsters spawned exceeded the winning condition.(infinite spawning)
 
 ### Added changes
-    The game can count the correct kill amount of monster.
-    The coin increase after killing monster is correct.
-    The monsters can walk correctly according to the layout.
-    The monsters are spawned according to winning condition.
-    Blood effect after killing monster.
+    1. The game can count the correct kill amount of monster.
+    2. The coin increase after killing monster is correct.
+    3. The monsters can walk correctly according to the layout.
+    4. The monsters are spawned according to winning condition.
+    5. Blood effect after killing monster.
 
 Reference: 
 

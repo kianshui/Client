@@ -1,12 +1,34 @@
-#### Yap Kian San 18001106
-#### Yap Kian Shui 18001084
+#### Yap Kian San 18001106   Computer Engineering
+#### Yap Kian Shui 18001084  Computer Engineering
 # OOP Project
 # Tower Defense Project
 
-## How we make the 'Tower defense game'?
-libs-Java AWT(Abstract Window Toolkit)
+#### What's new in our project:
 
-### First, making the layout in Class Frame by Inheritance.
+### Solved bugs
+    1.1 The coin increase is corrected when the monster is being shot and killed by multiple towers.
+    1.2 The monsters spawned exceeded the winning condition.(infinite spawning)
+
+### Added changes
+    The game can count the correct kill amount of monster.
+    The coin increase after killing monster is correct.
+    The monsters can walk correctly according to the layout.
+    The monsters are spawned according to winning condition.
+    Blood effect after killing monster.
+
+Reference: 
+
+    1. lab tutorial project 'karatheladybug'. (https://github.com/arwankhoiruddin/karatheladybug)
+    2. Java AWT Tutorial. (https://www.youtube.com/watch?v=VuGJO47Ommg&list=PLXpDKtDlsapicH6agKynUCCRbqkbtGG7s)
+    3. Java Game Development. (https://www.youtube.com/watch?v=hBhAWTSu104&list=PLA331A6709F40B79D)
+    4. tower defense tutorial. (https://www.youtube.com/watch?v=Euiqdd09n68&t=2663s)
+    5. for monster finding path (https://github.com/arwankhoiruddin/brick-path)
+    6. 2D Tower Defense Tutorial. (https://www.youtube.com/watch?v=uwp-xW0kylc)
+     
+
+## How we make the 'Tower defense game'?
+
+#### First, making the layout in Class Frame by Inheritance.
 #### About the layout
     class Frame
     -The Frame is the container that contain title bar and can have menu bars.

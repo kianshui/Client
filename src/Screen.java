@@ -4,7 +4,7 @@ import java.awt.image.*;
 import java.io.*;
 import javax.swing.*;
 
-public class Screen extends JPanel implements Runnable{
+public class Screen extends JPanel implements Runnable{		//interface
 	public Thread thread = new Thread(this);
 	
 	public static Image[] tileset_ground = new Image [100];
@@ -104,14 +104,14 @@ public class Screen extends JPanel implements Runnable{
 
 
 		room.draw(g); 	//Drawing the room
-		
+		//draw the monster
 		for(int i=0;i<mobs.length;i++) {
 			if(mobs[i].inGame) {
 				mobs[i].draw(g);
 				
 			}
 		}
-		
+
 		store.draw(g);	//Drawing the store
 		
 		//GameOver screen
@@ -173,7 +173,7 @@ public class Screen extends JPanel implements Runnable{
 				mobSpawner();
 				for(int i=0;i<mobs.length;i++) {
 					if(mobs[i].inGame){
-						mobs[i].physic();
+						mobs[i].physic(); //<< the walking of mob
 					}
 				}
 			} else {

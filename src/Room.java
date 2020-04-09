@@ -28,7 +28,8 @@ public class Room {
 			}
 		}
 	}
-	
+
+	//draw the road and green map
 	public void draw(Graphics g) {
 		for(int y=0;y<block.length;y++) {
 			for(int x=0;x<block[0].length;x++) {
@@ -42,6 +43,6 @@ public class Room {
 			}
 		}
 	}
-	
+
 	
 }

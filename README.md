@@ -3,6 +3,15 @@
 # OOP Project
 # Tower Defense Project
 
+### Reference: 
+
+    1. lab tutorial project 'karatheladybug'. (https://github.com/arwankhoiruddin/karatheladybug)
+    2. Java AWT Tutorial. (https://www.youtube.com/watch?v=VuGJO47Ommg&list=PLXpDKtDlsapicH6agKynUCCRbqkbtGG7s)
+    3. Java Game Development. (https://www.youtube.com/watch?v=hBhAWTSu104&list=PLA331A6709F40B79D)
+    4. tower defense tutorial. (https://www.youtube.com/watch?v=Euiqdd09n68)
+    5. for monster finding path (https://github.com/arwankhoiruddin/brick-path)
+    6. 2D Tower Defense Tutorial. (https://www.youtube.com/watch?v=uwp-xW0kylc)
+  
 #### What's new in our project:
 
 ### Solved bugs
@@ -16,15 +25,7 @@
     4. The monsters are spawned according to winning condition.
     5. Blood effect after killing monster.
 
-Reference: 
 
-    1. lab tutorial project 'karatheladybug'. (https://github.com/arwankhoiruddin/karatheladybug)
-    2. Java AWT Tutorial. (https://www.youtube.com/watch?v=VuGJO47Ommg&list=PLXpDKtDlsapicH6agKynUCCRbqkbtGG7s)
-    3. Java Game Development. (https://www.youtube.com/watch?v=hBhAWTSu104&list=PLA331A6709F40B79D)
-    4. tower defense tutorial. (https://www.youtube.com/watch?v=Euiqdd09n68&t=2663s)
-    5. for monster finding path (https://github.com/arwankhoiruddin/brick-path)
-    6. 2D Tower Defense Tutorial. (https://www.youtube.com/watch?v=uwp-xW0kylc)
-     
 
 ## How we make the 'Tower defense game'?
 
